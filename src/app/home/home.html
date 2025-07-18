@@ -9,20 +9,22 @@
       alt=""
       class="absolute bottom-0 right-0 w-full h-full object-cover -z-10 filter grayscale opacity-50"
     />
-    <div class="heading-container flex flex-col items-center justify-center">
+    <div
+      class="heading-container flex flex-col items-center justify-center md:max-w-[70ch]"
+    >
       <h1
-        class="w-full text-center text-4xl font-bold text-center p-0 m-0 bg-gradient-to-r from-blue-600 h-min via-blue-800 to-blue-400 text-transparent bg-clip-text inline-block"
+        class="w-full text-center text-4xl font-bold text-center p-0 m-0 bg-gradient-to-r from-blue-600 h-min via-blue-800 to-blue-400 text-transparent bg-clip-text inline-block md:text-5xl lg:text-6xl"
       >
         The
         <span
-          class="text-blue-600 h-min bg-gradient-to-r from-yellow-600 via-orange-600 to-red-800 inline-block text-transparent bg-clip-text"
+          class="text-blue-600 h-min bg-gradient-to-r from-yellow-600 via-orange-600 to-red-800 inline-block text-transparent bg-clip-text md:text-5xl lg:text-6xl"
           >ultramodern</span
         >
         pro-code no-code
       </h1>
       <div class="heading-box inline-flex">
         <h1
-          class="w-full text-center text-4xl font-bold text-center p-0 m-0 bg-gradient-to-r from-blue-600 via-blue-800 to-cyan-500 inline-block text-transparent bg-clip-text"
+          class="w-full text-center text-4xl font-bold text-center p-0 m-0 bg-gradient-to-r from-blue-600 via-blue-800 to-cyan-500 inline-block text-transparent bg-clip-text md:text-5xl lg:text-6xl"
         >
           platform
         </h1>
@@ -34,16 +36,18 @@
         />
       </div>
     </div>
-    <h2 class="text-center text-gray-700 p-0 m-0">
+    <h2 class="text-center text-gray-700 p-0 m-0 lg:max-w-[70ch]">
       Build mobile apps and responsive web apps visually, publish to the app
       stores in one click, and export clean semantic code that's ready for
       developers.
     </h2>
-    <div class="input-container flex flex-row gap-0 h-12 w-max-60 w-full">
+    <div
+      class="input-container flex flex-row gap-0 h-12 w-max-60 w-full md:max-w-96"
+    >
       <input
         type="text"
         placeholder="Enter your email"
-        class="px-4 w-20 grow rounded-tl-full rounded-bl-full bg-white shadow-md border-1 border-gray-100"
+        class="px-4 w-20 grow rounded-tl-full text-gray-600 rounded-bl-full bg-white shadow-md border-1 border-gray-100"
       />
       <button
         class="px-4 w-fit rounded-tr-full rounded-br-full bg-blue-600 text-white min-w-32 shadow-md hover:bg-blue-700 cursor-pointer"
@@ -59,8 +63,8 @@
         <img src="/icons/star.svg" alt="Rating" />
         <img src="/icons/star-partial.svg" alt="Rating" />
       </div>
-      <span class="text-xs max-w-64 text-center"
-        ><p class="text-xs">
+      <span class="text-sm max-w-64 text-center mt-2 text-gray-600"
+        ><p class="text-sm">
           Our clients have rated us 4.9/5, based on
           <span class="text-blue-500 underline">6,351 reviews</span>
         </p></span
@@ -78,7 +82,7 @@
     class="flex w-full flex-col bg-white pt-4 pb-8 items-center gap-4 shadow-md"
   >
     <h3>Trusted by</h3>
-    <div class="flex flex-row gap-4 w-full justify-between">
+    <div class="flex flex-row gap-4 w-full justify-between px-8">
       <img class="h-4" src="/images/floodgate.png" alt="Google" />
       <img class="h-4" src="/images/fuel-capital.png" alt="Microsoft" />
       <img class="h-4" src="/images/y-combinator.png" alt="Apple" />
@@ -98,29 +102,29 @@
         forward.
       </h2>
     </div>
-    <div class="row1 gray-banner h-[400px] w-full bg-gray-800 mt-8">
-      <div class="perks-container flex h-full flex-row gap-4 w-full relative">
-        <div
-          class="desktop-container w-full h-[400px] relative flex flex-col items-center justify-center"
-        >
-          <img
-            src="/images/desktop-mockup.png"
-            alt="Spark"
-            class="w-[85%] h-auto object-cover absolute bottom-2 left-1/2 -translate-x-1/2 z-20"
-          />
-          <img
-            src="/images/desktop-surface.png"
-            alt="Spark"
-            class="w-full h-auto object-cover absolute -bottom-0 left-0 z-10"
-          />
-        </div>
+    <div
+      class="perks-container flex h-full flex-row gap-4 w-full relative md:min-h-[80svh] bg-gray-800 mt-8 lg:max-h-[60svh]"
+    >
+      <div
+        class="desktop-container w-full h-[400px] relative flex flex-col items-center justify-center md:min-h-[80svh] lg:max-h-[40svh]"
+      >
+        <img
+          src="/images/desktop-mockup.png"
+          alt="Spark"
+          class="w-4/5 max-w-96 h-auto object-cover absolute bottom-2 left-1/2 -translate-x-1/2 z-20 md:max-w-[600px]"
+        />
+        <img
+          src="/images/desktop-surface.png"
+          alt="Spark"
+          class="w-full h-auto object-cover absolute -bottom-0 left-0 z-10"
+        />
       </div>
     </div>
     <div
-      class="desktop-base bg-gradient-to-b from-[#E4E4E4] to-white min-h-[400px] w-full flex flex-col items-center justify-center"
+      class="desktop-base bg-gradient-to-b from-[#E4E4E4] to-white h-full w-full flex flex-col items-center justify-center"
     >
       <div
-        class="perk-container px-8 flex flex-col gap-4 w-full h-full items-center justify-center py-8"
+        class="perk-container px-8 flex flex-col md:flex-row gap-4 w-full h-full items-center justify-center py-8 flex-wrap"
       >
         @for (item of perks; track item.title) {
         <div
@@ -273,7 +277,7 @@
     <div class="review-content mb-10 flex flex-col items-center gap-4 w-full">
       <img src="/images/phones-layout.svg" alt="Review" />
       <div
-        class="reviews-container relative w-full grid grid-cols-[48px_1fr_48px] grid-rows-[1fr_32px] md:grid-cols-3"
+        class="reviews-container relative w-full grid grid-cols-[48px_1fr_48px] grid-rows-[1fr_32px] md:grid-cols-[1fr_2fr_1fr]"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -304,7 +308,7 @@
         @for (item of reviews; track item; let idx = $index) { @if (idx ===
         activeIndex) {
         <div
-          class="review-card bg-white rounded-lg p-6 border-2 border-gray-200 aspect-square w-fit flex flex-col justify-start col-start-2 row-start-1"
+          class="review-card bg-white rounded-lg p-6 border-2 border-gray-200 aspect-square w-fit flex flex-col justify-start col-start-2 row-start-1 md:max-w-96 align-self-center justify-self-center"
         >
           <div
             class="review-header flex flex-row-reverse gap-4 items-center justify-between pb-6"
@@ -365,14 +369,16 @@
   </section>
   <section class="banner">
     <div
-      class="banner bg-gradient-to-r from-blue-600 to-blue-800 h-48 flex flex-col items-center justify-center"
+      class="banner bg-gradient-to-r from-blue-600 to-blue-800 h-48 flex flex-col items-center justify-center md:h-96"
     >
       <div
         class="banner-content flex flex-row gap-4 text-2xl items-center justify-center px-8"
       >
-        <h3 class="text-white font-bold">Start building your app today</h3>
+        <h3 class="text-white font-bold md:text-5xl">
+          Start building your app today
+        </h3>
         <button
-          class="bg-black text-blue-600 px-4 py-2 text-white text-xl hover:bg-white hover:text-black cursor-pointer"
+          class="bg-black text-blue-600 px-4 py-2 text-white text-xl hover:bg-white hover:text-black cursor-pointer md:text-2xl md:font-bold md:px-8 md:py-4"
         >
           Join {{ appName }} – It's Free
         </button>

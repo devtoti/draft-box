@@ -10,6 +10,9 @@ import { RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
   isMenuOpen = false;
+  hoveredItemIndex: number | null = null;
+  menuPosition = { left: 0, top: 0 };
+  private hideTimeout: any;
   
   navigationItems = [
     { label: 'Home', path: '/' },
@@ -28,5 +31,34 @@ export class NavbarComponent {
 
   closeMenu() {
     this.isMenuOpen = false;
+  }
+
+  onMouseEnter(index: number, event: MouseEvent) {
+    if (this.hideTimeout) {
+      clearTimeout(this.hideTimeout);
+      this.hideTimeout = null;
+    }
+    
+    const target = event.currentTarget as HTMLElement;
+    const isHoveringMenu = target.classList.contains('floating-menu-desktop');
+    
+    if (!isHoveringMenu) {
+      this.hoveredItemIndex = index;
+      this.calculateMenuPosition(event);
+    }
+  }
+
+  hideMenu() {
+    this.hoveredItemIndex = null;
+  }
+
+  private calculateMenuPosition(event: MouseEvent) {
+    const target = event.currentTarget as HTMLElement;
+    const rect = target.getBoundingClientRect();
+    
+    this.menuPosition = {
+      left: rect.left + (rect.width / 2) - 200,
+      top: rect.bottom + 10
+    };
   }
 }
