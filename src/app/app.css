@@ -1,0 +1,10 @@
+/* Global styles */
+.app-main {
+  min-height: calc(100vh - 70px);
+}
+
+/* Ensure consistent rendering */
+:host {
+  display: block;
+  min-height: 100vh;
+}

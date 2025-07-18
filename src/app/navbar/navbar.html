@@ -1,0 +1,75 @@
+<nav class="navbar sticky top-0 z-200 bg-white">
+  <div
+    class="navbar-container flex flex-row items-center justify-between px-4 py-2 shadow-sm"
+  >
+    <!-- Logo/Brand -->
+    <div class="navbar-brand">
+      <a routerLink="/" class="brand-link">
+        <img
+          src="/icons/logo.svg"
+          alt="Draftbit Logo"
+          class="w-auto h-8 cursor-pointer"
+        />
+      </a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <div class="hidden md:block navbar-menu desktop-menu gap-4">
+      <ul class="nav-list flex flex-row w-full gap-8">
+        <li
+          *ngFor="let item of navigationItems; let i = index"
+          class="nav-item"
+        >
+          <ng-container *ngIf="i > 0">
+            {{ item.label }}
+          </ng-container>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button
+      class="mobile-menu-toggle block md:hidden flex flex-col gap-1 cursor-pointer"
+      (click)="toggleMenu()"
+      [class.active]="isMenuOpen"
+      aria-label="Toggle navigation menu"
+    >
+      <span class="hamburger-line w-10 h-[2px] bg-blue-800"></span>
+      <span class="hamburger-line w-10 h-[2px] bg-blue-800"></span>
+      <span class="hamburger-line w-10 h-[2px] bg-blue-800"></span>
+    </button>
+
+    <!-- Mobile Navigation -->
+    <div
+      class="floating-menu block md:hidden navbar-menu mobile-menu z-200 top-15 right-2 h-min p-8 pb-4 max-w-7/8 bg-white rounded-md shadow-md absolute opacity-0 invisible transition-all duration-500"
+      [class.opacity-100]="isMenuOpen"
+      [class.visible]="isMenuOpen"
+    >
+      <ul class="nav-list">
+        <li class="max-w-[30ch] text-blue-700 font-bold text-lg">devtoti</li>
+        <li class="max-w-[30ch] text-gray-500">
+          Make sure to check out my other projects at
+          <a href="https://devtoti.com" class="text-blue-700"
+            >https://www.devtoti.com</a
+          >
+        </li>
+        <li
+          class="max-w-[40ch] text-gray-400 text-xs border-gray-400 border-t-1 mt-4"
+        >
+          This landing page is a mockup only. Built with Angular and Tailwind.
+        </li>
+      </ul>
+    </div>
+    <div
+      class="triangle absolute top-12 right-10 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[12px] border-b-white z-200 opacity-0 invisible transition-all duration-500"
+      [class.opacity-100]="isMenuOpen"
+      [class.visible]="isMenuOpen"
+    ></div>
+  </div>
+  <div
+    class="overlay fixed inset-0 bg-black/50 z-100 transition-opacity"
+    [class.opacity-0]="!isMenuOpen"
+    [class.invisible]="!isMenuOpen"
+    (click)="closeMenu()"
+  ></div>
+</nav>

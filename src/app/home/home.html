@@ -1,0 +1,448 @@
+<div
+  class="main-content min-h-[100vh] max-w-[100vw] overflow-hidden flex flex-col"
+>
+  <section
+    class="hero-section flex flex-col gap-4 items-center justify-center px-8 mt-8 relative"
+  >
+    <img
+      src="/images/perspective-grid.png"
+      alt=""
+      class="absolute bottom-0 right-0 w-full h-full object-cover -z-10 filter grayscale opacity-50"
+    />
+    <div class="heading-container flex flex-col items-center justify-center">
+      <h1
+        class="w-full text-center text-4xl font-bold text-center p-0 m-0 bg-gradient-to-r from-blue-600 h-min via-blue-800 to-blue-400 text-transparent bg-clip-text inline-block"
+      >
+        The
+        <span
+          class="text-blue-600 h-min bg-gradient-to-r from-yellow-600 via-orange-600 to-red-800 inline-block text-transparent bg-clip-text"
+          >ultramodern</span
+        >
+        pro-code no-code
+      </h1>
+      <div class="heading-box inline-flex">
+        <h1
+          class="w-full text-center text-4xl font-bold text-center p-0 m-0 bg-gradient-to-r from-blue-600 via-blue-800 to-cyan-500 inline-block text-transparent bg-clip-text"
+        >
+          platform
+        </h1>
+        <img
+          src="/icons/spark.svg"
+          alt=""
+          role="presentation"
+          class="w-6 h-6 inline-flex"
+        />
+      </div>
+    </div>
+    <h2 class="text-center text-gray-700 p-0 m-0">
+      Build mobile apps and responsive web apps visually, publish to the app
+      stores in one click, and export clean semantic code that's ready for
+      developers.
+    </h2>
+    <div class="input-container flex flex-row gap-0 h-12 w-max-60 w-full">
+      <input
+        type="text"
+        placeholder="Enter your email"
+        class="px-4 w-20 grow rounded-tl-full rounded-bl-full bg-white shadow-md border-1 border-gray-100"
+      />
+      <button
+        class="px-4 w-fit rounded-tr-full rounded-br-full bg-blue-600 text-white min-w-32 shadow-md hover:bg-blue-700 cursor-pointer"
+      >
+        Get Started
+      </button>
+    </div>
+    <div class="rating-container flex flex-col items-center mt-2">
+      <div class="stars flex flex-row gap-1 h-8">
+        <img src="/icons/star.svg" alt="Rating" />
+        <img src="/icons/star.svg" alt="Rating" />
+        <img src="/icons/star.svg" alt="Rating" />
+        <img src="/icons/star.svg" alt="Rating" />
+        <img src="/icons/star-partial.svg" alt="Rating" />
+      </div>
+      <span class="text-xs max-w-64 text-center"
+        ><p class="text-xs">
+          Our clients have rated us 4.9/5, based on
+          <span class="text-blue-500 underline">6,351 reviews</span>
+        </p></span
+      >
+    </div>
+    <article class="mt-4">
+      <img
+        src="/images/hero-image.png"
+        alt="Home"
+        class="w-full h-full object-cover"
+      />
+    </article>
+  </section>
+  <section
+    class="flex w-full flex-col bg-white pt-4 pb-8 items-center gap-4 shadow-md"
+  >
+    <h3>Trusted by</h3>
+    <div class="flex flex-row gap-4 w-full justify-between">
+      <img class="h-4" src="/images/floodgate.png" alt="Google" />
+      <img class="h-4" src="/images/fuel-capital.png" alt="Microsoft" />
+      <img class="h-4" src="/images/y-combinator.png" alt="Apple" />
+      <img class="h-4" src="/images/corazon-capital.png" alt="Apple" />
+    </div>
+  </section>
+  <section class="app-perks h-full min-h-[60vh] mt-4">
+    <div
+      class="heading-container flex flex-col w-full items-center px-10 justify-center mt-4"
+    >
+      <h1 class="text-center text-3xl font-bold text-center mb-4">
+        Unlock your full app-building power with Draftbit
+      </h1>
+      <h2 class="text-center text-gray-700 p-0 m-0">
+        Produce beautiful apps by using our modular, building block system.
+        Scale your application and modify your screens atomically as you move
+        forward.
+      </h2>
+    </div>
+    <div class="row1 gray-banner h-[400px] w-full bg-gray-800 mt-8">
+      <div class="perks-container flex h-full flex-row gap-4 w-full relative">
+        <div
+          class="desktop-container w-full h-[400px] relative flex flex-col items-center justify-center"
+        >
+          <img
+            src="/images/desktop-mockup.png"
+            alt="Spark"
+            class="w-[85%] h-auto object-cover absolute bottom-2 left-1/2 -translate-x-1/2 z-20"
+          />
+          <img
+            src="/images/desktop-surface.png"
+            alt="Spark"
+            class="w-full h-auto object-cover absolute -bottom-0 left-0 z-10"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="desktop-base bg-gradient-to-b from-[#E4E4E4] to-white min-h-[400px] w-full flex flex-col items-center justify-center"
+    >
+      <div
+        class="perk-container px-8 flex flex-col gap-4 w-full h-full items-center justify-center py-8"
+      >
+        @for (item of perks; track item.title) {
+        <div
+          class="perk-card bg-transparent rounded-full border-2 border-gray-700 px-4 py-1 flex flex-row gap-2 items-center text-gray-700 font-semibold hover:bg-gray-300 cursor-pointer transition-all duration-300"
+        >
+          <img
+            src="{{ item.icon }}"
+            alt="Spark"
+            class="w-6 h-6 inline-flex filter invert multiply"
+          />
+          <p>{{ item.title }}</p>
+        </div>
+        } @empty {
+        <li>There are no items.</li>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="experts relative min-h-[120svh] bg-red-200 bg-[url('/images/noisy-gradient.png')] bg-cover bg-center flex flex-col items-center justify-center relative py-20 lg:py-60"
+  >
+    <div
+      class="custom-shape-divider-top-1752714932 top-0 -right-0 w-[200%] bg-red overflow-hidden line-height-0 absolute"
+    >
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M1200 0L0 0 598.97 114.72 1200 0z"
+          class="shape-fill"
+          fill="white"
+        ></path>
+      </svg>
+    </div>
+    <!-- <img
+      src="/radial-gradient.png"
+      alt="Experts"
+      class="w-full h-full object-cover absolute top-0 left-0"
+    /> -->
+
+    <div
+      class="heading-container text-white flex flex-col w-full items-center px-10 pt-24 justify-center mt-4"
+    >
+      <h1 class="text-center text-3xl font-bold text-center mb-4">
+        Much more than an app-building platform
+      </h1>
+      <h2 class="text-center text-white p-0 m-0">
+        {{ appName }} offers a wide range of app-building solutions to help you
+        scale your projects while saving time and effort. With Experts, there
+        won't be anything holding you back from achieving your goals.
+      </h2>
+      <button
+        class="rounded-full min-w-40 h-8 px-4 mt-4 bg-white text-gray-800"
+      >
+        Explore {{ appName }} Experts
+      </button>
+    </div>
+    <div
+      class="img-container w-4/5 h-full flex items-center max-h-96 max-w-96 justify-center py-8 mt-10 bg-white/30 rounded-lg border-2 border-white relative flex-col"
+    >
+      <img
+        src="/images/glass-cube.png"
+        alt="Experts"
+        class="w-2/5 h-auto object-cover transition-transform hover:-translate-y-4 transition-all duration-500"
+      />
+      <div
+        class="chips-container flex flex-row gap-2 max-h-10 absolute -bottom-15"
+      >
+        @for (item of experts; track item) {
+        <li
+          class="chip decoration-none list-none px-4 py-1 inline-flex w-max rounded-full text-white bg-white/10 border-2 border-white items-center justify-center"
+        >
+          {{ item }}
+        </li>
+        } @empty {
+        <li>{{ appName }} Experts</li>
+        }
+      </div>
+    </div>
+    <div
+      class="heading-container text-white flex flex-col w-full items-center px-10 pt-24 justify-center mt-4"
+    >
+      <h1 class="text-center text-3xl font-bold text-center mb-4">
+        We care, and we are here for you.
+      </h1>
+      <h2 class="text-center text-white p-0 m-0">
+        {{ appName }} Support is ready to assist you during your journey. We
+        will make sure you have everything you need to get started.
+      </h2>
+      <button
+        class="rounded-full min-w-40 h-8 px-4 mt-4 bg-white text-gray-800"
+      >
+        Explore Support Center
+      </button>
+    </div>
+    <div
+      class="img-container w-full h-full flex items-center justify-center my-8 relative pb-40 pt-20 lg:w-2/5"
+    >
+      <img
+        src="/images/world-map.png"
+        alt="Experts"
+        class="w-3/5 h-auto object-cover max-h-96 max-w-96"
+      />
+      <img
+        src="/images/support-block.png"
+        alt="Experts"
+        class="w-1/5 h-auto object-cover absolute top-10 left-5 shadow-lg max-h-80 max-w-40 lg:w-1/8"
+      />
+      <img
+        src="/images/support-block.png"
+        alt="Experts"
+        class="w-1/5 h-auto object-cover absolute bottom-20 right-5 shadow-lg max-h-80 max-w-40 lg:w-1/8"
+      />
+    </div>
+    <div
+      class="custom-shape-divider-bottom-1752714932 bottom-0 rotate-180 -left-0 w-[200%] bg-red overflow-hidden line-height-0 absolute"
+    >
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M1200 0L0 0 598.97 114.72 1200 0z"
+          class="shape-fill"
+          fill="white"
+        ></path>
+      </svg>
+    </div>
+  </section>
+  <section
+    class="reviews bg-[length:40px_40px] bg-[linear-gradient(to_right,rgb(240,240,240)_1px,transparent_1px),linear-gradient(to_bottom,rgb(240,240,240)_1px,transparent_1px)] min-h-[60svh]"
+  >
+    <div
+      class="heading-container text-gray-700 flex flex-col w-full items-center px-10 pt-10 justify-center mt-4"
+    >
+      <h1 class="text-center text-3xl font-bold text-center mb-4">
+        Hear what our clients are saying
+      </h1>
+      <h2 class="text-center text-gray-700 p-0 m-0">
+        Explore what our talented builders have achieved with Draftbit, and how
+        our services has improved their workflow.
+      </h2>
+    </div>
+    <div class="review-content mb-10 flex flex-col items-center gap-4 w-full">
+      <img src="/images/phones-layout.svg" alt="Review" />
+      <div
+        class="reviews-container relative w-full grid grid-cols-[48px_1fr_48px] grid-rows-[1fr_32px] md:grid-cols-3"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+          class="text-gray-300 hover:text-gray-500 cursor-pointer col-start-1 self-center rotate-180 align-self-center justify-self-end"
+          (click)="prevReview()"
+        >
+          <path
+            fill="currentColor"
+            d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12A10 10 0 0 1 12 2a10 10 0 0 1 10 10m-12 6l6-6l-6-6l-1.4 1.4l4.6 4.6l-4.6 4.6z"
+          />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+          class="text-gray-300 hover:text-gray-500 cursor-pointer col-start-3 self-center align-self-center justify-self-start"
+          (click)="nextReview()"
+        >
+          <path
+            fill="currentColor"
+            d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12A10 10 0 0 1 12 2a10 10 0 0 1 10 10m-12 6l6-6l-6-6l-1.4 1.4l4.6 4.6l-4.6 4.6z"
+          />
+        </svg>
+        @for (item of reviews; track item; let idx = $index) { @if (idx ===
+        activeIndex) {
+        <div
+          class="review-card bg-white rounded-lg p-6 border-2 border-gray-200 aspect-square w-fit flex flex-col justify-start col-start-2 row-start-1"
+        >
+          <div
+            class="review-header flex flex-row-reverse gap-4 items-center justify-between pb-6"
+          >
+            <img
+              src="{{ item.image }}"
+              alt="Review"
+              class="w-24 h-24 rounded-lg object-cover"
+            />
+            <div class="review-headings flex flex-col gap-1">
+              <h4 class="text-2xl font-bold">{{ item.name }}</h4>
+              <h5 class="text-md text-gray-500">{{ item.role }}</h5>
+              <h6 class="text-md text-gray-500">{{ item.company }}</h6>
+            </div>
+          </div>
+          <p class="text-gray-600 text-lg italic">{{ item.review }}</p>
+          <div class="rating-container flex flex-row gap-1 mt-auto mx-auto">
+            @for (star of [1,2,3,4,5]; track $index) {
+            <img
+              src="/icons/star.svg"
+              alt="Rating"
+              class="w-6 h-6 object-cover"
+            />
+            } @empty {
+            <li>No rating available</li>
+            }
+          </div>
+        </div>
+        } } @empty {
+        <li>No review available</li>
+        }
+        <div
+          class="carousel-container flex flex-row gap-2 items-center justify-center mt-4 col-start-2 row-start-2"
+        >
+          <span
+            [ngClass]="activeIndex === 0 ? 'bg-gray-500' : 'bg-gray-300'"
+            class="h-2 w-2 rounded-full"
+          ></span>
+          <span
+            [ngClass]="activeIndex === 1 ? 'bg-gray-500' : 'bg-gray-300'"
+            class="h-2 w-2 rounded-full"
+          ></span>
+          <span
+            [ngClass]="activeIndex === 2 ? 'bg-gray-500' : 'bg-gray-300'"
+            class="h-2 w-2 rounded-full"
+          ></span>
+          <span
+            [ngClass]="activeIndex === 3 ? 'bg-gray-500' : 'bg-gray-300'"
+            class="h-2 w-2 rounded-full"
+          ></span>
+          <span
+            [ngClass]="activeIndex === 4 ? 'bg-gray-500' : 'bg-gray-300'"
+            class="h-2 w-2 rounded-full"
+          ></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="banner">
+    <div
+      class="banner bg-gradient-to-r from-blue-600 to-blue-800 h-48 flex flex-col items-center justify-center"
+    >
+      <div
+        class="banner-content flex flex-row gap-4 text-2xl items-center justify-center px-8"
+      >
+        <h3 class="text-white font-bold">Start building your app today</h3>
+        <button
+          class="bg-black text-blue-600 px-4 py-2 text-white text-xl hover:bg-white hover:text-black cursor-pointer"
+        >
+          Join {{ appName }} – It's Free
+        </button>
+      </div>
+    </div>
+  </section>
+  <footer class="gap-4 px-10 py-10 flex flex-col items-center">
+    <div
+      class="routes-container flex flex-row gap-4 w-full items-start justify-center grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:max-w-[800px]"
+    >
+      <ul class="flex flex-col gap-2 text-gray-500">
+        <li class="text-blue-700 font-bold">Builder</li>
+        <li class="hover:text-blue-700 cursor-pointer">Collaborate</li>
+        <li class="hover:text-blue-700 cursor-pointer">Design</li>
+        <li class="hover:text-blue-700 cursor-pointer">Publish</li>
+        <li class="hover:text-blue-700 cursor-pointer">Export</li>
+      </ul>
+      <ul class="flex flex-col gap-2 text-gray-500">
+        <li class="text-blue-700 font-bold">Use Cases</li>
+        <li class="hover:text-blue-700 cursor-pointer">Designers</li>
+        <li class="hover:text-blue-700 cursor-pointer">Developers</li>
+        <li class="hover:text-blue-700 cursor-pointer">Agencies</li>
+        <li>Startups</li>
+      </ul>
+      <ul class="flex flex-col gap-2 text-gray-500">
+        <li class="text-blue-700 font-bold">Resources</li>
+        <li class="hover:text-blue-700 cursor-pointer">Experts</li>
+        <li class="hover:text-blue-700 cursor-pointer">Support</li>
+        <li>Community</li>
+        <li>Blog</li>
+      </ul>
+      <ul class="flex flex-col gap-2 text-gray-500">
+        <li class="text-blue-700 font-bold">Explore</li>
+        <li class="hover:text-blue-700 cursor-pointer">Builder</li>
+        <li class="hover:text-blue-700 cursor-pointer">Pricing</li>
+        <li class="hover:text-blue-700 cursor-pointer">Success Stories</li>
+        <li>FAQs</li>
+      </ul>
+      <ul class="flex flex-col gap-2 text-gray-500">
+        <li class="text-blue-700 font-bold">Compare</li>
+        <li class="hover:text-blue-700 cursor-pointer">
+          {{ appName }} vs Bubble
+        </li>
+        <li class="hover:text-blue-700 cursor-pointer">
+          {{ appName }} vs FlutterFlow
+        </li>
+        <li class="hover:text-blue-700 cursor-pointer">
+          {{ appName }} vs Adalo
+        </li>
+        <li>{{ appName }} vs Bildr</li>
+      </ul>
+    </div>
+    <div
+      class="social-media flex flex-col w-full mt-10 gap-4 items-center justify-center"
+    >
+      <div
+        class="social-media-container flex flex-row gap-4 items-center justify-center"
+      >
+        <img src="/icons/logo.svg" alt="Facebook" />
+      </div>
+      <div
+        class="social-media-container flex flex-row gap-4 items-center justify-center"
+      >
+        <img src="icons/x-social-media-round-icon 1.svg" alt="Instagram" />
+        <img src="/icons/product-hunt-black-icon 1.svg" alt="LinkedIn" />
+        <img src="/icons/github-icon 1.svg" alt="LinkedIn" />
+      </div>
+      <h6 class="text-gray-500 text-sm">
+        Built in Angular. This is a mockup site.
+      </h6>
+    </div>
+  </footer>
+</div>

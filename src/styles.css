@@ -1,1 +1,16 @@
+@import "tailwindcss";
 /* You can add global styles to this file, and also import other style files */
+
+@theme {
+  --debug: 2px solid rgb(239 68 68);
+}
+
+.debug {
+  outline: var(--debug);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
