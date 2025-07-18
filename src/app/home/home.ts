@@ -1,6 +1,21 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+interface Perk {
+  icon: string;
+  title: string;
+}
+
+interface Review {
+  name: string;
+  role: string;
+  company: string;
+  review: string;
+  rating: number;
+  image: string;
+  index: number;
+}
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -8,8 +23,9 @@ import { CommonModule } from '@angular/common';
   templateUrl: './home.html',
 })
 export class Home {
-  appName = 'Draftbox';
-  perks = [
+  appName: string = 'Draftbox';
+  
+  perks: Perk[] = [
     {
       icon: '/icons/heroicons/apps.svg',
       title: 'New App Templates',
@@ -31,7 +47,8 @@ export class Home {
       title: 'Image Generation',
     },
   ];
-  experts = [
+  
+  experts: string[] = [
     'UI/UX Design',
     'App Development',
     'AI Integration',
@@ -42,7 +59,8 @@ export class Home {
     'Coaching sessions',
     'Project guidance',
   ];
-  reviews = [
+  
+  reviews: Review[] = [
     {
       name: 'Alex R.',
       role: 'CEO of Appify',
@@ -94,14 +112,17 @@ export class Home {
       index: 4,
     },
   ];
-  activeIndex = 0;
-  nextReview() {
+  
+  activeIndex: number = 0;
+  
+  nextReview(): void {
     this.activeIndex++;
-    if (this.activeIndex >= 5) {
+    if (this.activeIndex >= this.reviews.length) {
       this.activeIndex = 0;
     }
   }
-  prevReview() {
+  
+  prevReview(): void {
     if (this.activeIndex > 0) {
       this.activeIndex--;
     }

@@ -2,6 +2,16 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+interface NavigationItem {
+  label: string;
+  path: string;
+}
+
+interface MenuPosition {
+  left: number;
+  top: number;
+}
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -9,12 +19,12 @@ import { RouterModule } from '@angular/router';
   templateUrl: './navbar.html',
 })
 export class NavbarComponent {
-  isMenuOpen = false;
+  isMenuOpen: boolean = false;
   hoveredItemIndex: number | null = null;
-  menuPosition = { left: 0, top: 0 };
-  private hideTimeout: any;
+  menuPosition: MenuPosition = { left: 0, top: 0 };
+  private hideTimeout: NodeJS.Timeout | null = null;
   
-  navigationItems = [
+  navigationItems: NavigationItem[] = [
     { label: 'Home', path: '/' },
     { label: 'Services', path: '/services' },
     { label: 'Experts', path: '/contact' },
@@ -24,16 +34,16 @@ export class NavbarComponent {
     { label: 'About', path: '/about' },
   ];
 
-  toggleMenu() {
+  toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
-    console.log('working')
+    console.log('working');
   }
 
-  closeMenu() {
+  closeMenu(): void {
     this.isMenuOpen = false;
   }
 
-  onMouseEnter(index: number, event: MouseEvent) {
+  onMouseEnter(index: number, event: MouseEvent): void {
     if (this.hideTimeout) {
       clearTimeout(this.hideTimeout);
       this.hideTimeout = null;
@@ -48,11 +58,11 @@ export class NavbarComponent {
     }
   }
 
-  hideMenu() {
+  hideMenu(): void {
     this.hoveredItemIndex = null;
   }
 
-  private calculateMenuPosition(event: MouseEvent) {
+  private calculateMenuPosition(event: MouseEvent): void {
     const target = event.currentTarget as HTMLElement;
     const rect = target.getBoundingClientRect();
     
