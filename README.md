@@ -1,59 +1,111 @@
-# AngularApp
+# Draftbox Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.0.
+A modern, responsive website built for Draftbox - a no-code low-code app builder tech company. This project is based on one of my many Figma landing page designs using Angular and Tailwind CSS.
 
-## Development server
+## Screenshots
 
-To start a local development server, run:
+![Draftbox Website Screenshot](/public/images/project-thumbnail.png)
 
-```bash
-ng serve
-```
+The screenshot above shows the landing page of the Draftbox website, featuring the modern UI design, responsive navigation, and key content sections.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Technologies Used
 
-## Code scaffolding
+- **Angular** - Frontend framework
+- **Tailwind CSS** - Utility-first CSS framework
+- **TypeScript** - Programming language
+- **Angular Router** - For navigation between components
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Features
 
-```bash
-ng generate component component-name
-```
+- Responsive navigation with animated dropdown menus
+- Modern, clean UI following Draftbox's brand guidelines
+- Optimized performance with standalone components
+- Mobile-first design approach
+- Smooth page transitions and interactions
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Project Structure
 
-```bash
-ng generate --help
-```
+The application is organized into several key components:
 
-## Building
+- `NavbarComponent` - Main navigation with responsive menu
+- `HomeComponent` - Landing page
+- `ServicesComponent` - Services overview
+- `ContactComponent` - Contact information
+- And more feature-specific components
 
-To build the project run:
+## Responsiveness
 
-```bash
-ng build
-```
+The website is fully responsive across all device sizes:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- **Mobile (<768px)**: Single column layout, hamburger menu navigation
+- **Tablet (768px-1024px)**: Two column layout, expanded navigation
+- **Desktop (>1024px)**: Full layout with hover effects and animations
+- **Large Desktop (>1440px)**: Optimized spacing and typography
 
-## Running unit tests
+Key responsive features:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- Fluid typography using Tailwind's responsive text classes
+- Flexible grid layouts with CSS Grid and Flexbox
+- Conditional rendering of UI elements based on screen size
 
-```bash
-ng test
-```
+## Getting Started
 
-## Running end-to-end tests
+1. Clone the repository:
 
-For end-to-end (e2e) testing, run:
+   ```bash
+   git clone https://github.com/yourusername/draftbox-website.git
+   ```
 
-```bash
-ng e2e
-```
+2. Install dependencies:
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+   ```bash
+   cd draftbox-website
+   npm install
+   ```
 
-## Additional Resources
+3. Start the development server:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+   ```bash
+   ng serve
+   ```
+
+4. Open your browser and navigate to:
+   ```
+   http://localhost:4200
+   ```
+
+## About Me
+
+I am a Frontend Developer with a strong background in UI/UX design. My unique combination of design and development skills allows me to create cohesive, user-centered web experiences from concept to implementation.
+
+### Design + Development Approach
+
+I take a holistic approach to web development by:
+
+- Designing intuitive user interfaces and experiences
+- Creating high-fidelity prototypes and design systems
+- Implementing responsive, accessible frontends
+- Writing clean, maintainable code
+
+### Technical Skills
+
+I work with modern frontend frameworks and tools including:
+
+- Next.js for React-based applications
+- SvelteKit for fast, efficient web apps
+- Angular for enterprise solutions
+- Tailwind CSS for rapid styling
+- Figma for UI/UX design
+
+My end-to-end process ensures pixel-perfect implementation of designs while maintaining excellent performance and accessibility standards.
+
+### Connect With Me
+
+You can find me and my work on various platforms:
+
+- 🎨 [Portfolio](https://devtoti.com) - View my latest projects and case studies
+- 🖌️ [Dribbble](https://dribbble.com/totisketches) - Check out my design work and UI experiments
+- 💼 [LinkedIn](https://linkedin.com/in/devtoti) - Connect with me professionally
+- ✉️ [Email](mailto:toti.webdev@gmail.com) - Reach out directly for collaborations
+
+Feel free to reach out if you'd like to discuss potential projects or opportunities!
